@@ -19,14 +19,14 @@ common
 
 <pre>
 >>> from webscraping import common
->>> common.remove_tags('hello <b>world</b>!')
+>>> common.remove_tags('hello &lt;b&gt;world&lt;/b&gt;!')
 'hello world!'
 
 >>> common.extract_domain('http://www.google.com.au/tos.html')
 'google.com.au'
 
->>> common.unescape('&lt;hello&nbsp;&amp;&nbsp;world&gt;')
-'<hello & world>'
+>>> common.unescape('&amp;lt;hello&amp;nbsp;&amp;amp;&amp;nbsp;world&amp;gt;')
+'&lt;hello &amp; world&gt;'
 
 >>> common.extract_emails('hello richard AT sitescraper DOT net world')
 ['richard@sitescraper.net']
